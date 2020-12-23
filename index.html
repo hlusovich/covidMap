@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marker Custom Icons Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+<div class="container" id="container">
+    <div class="table" id="table">
+        <div id="table-nav" class="table-nav">
+            <span class="table-nav-item  table-nav-item_active">cases</span>
+            <span class="table-nav-item">deaths</span>
+            <span class="table-nav-item">recovered</span>
+        </div>
+        <div class="table-search">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="search country" id="countySearch"/>
+        </div>
+        <button class="show-full-size-btn" id="full-size-table-btn">
+            <span class="material-icons">crop_free</span>
+        </button>
+        <div class="table-list" id="table-list"></div>
+    </div>
+    <div class="chart" id="chart-container">
+        <button class="show-full-size-btn" id="full-size-chart-btn">
+            <span class="material-icons">crop_free</span>
+        </button>
+        <canvas id="chart"></canvas>
+    </div>
+    <div class="table-buttons" id="table-buttons">
+        <button id="absolute-btn" class="table-buttons_active">absolute</button>
+        <span>|</span>
+        <button id="per100000-btn">per 100000</button>
+        <span>|</span>
+        <button id="lastDay">last day</button>
+        <span>|</span>
+        <button id="lastDayPer1000Btn">last day per 100000</button>
+    </div>
+    <div class="cap" id="cap">COVID-19 Dashboard by Klusovich Mikita 2020 12 20 RsSchool GitHub:<a href="https://github.com/hlusovich">Hlusovich</a>
+    </div>
+    <div class="global-cases" id="global-cases"></div>
+    <div class="legenda" id="legenda">
+        <div class="legenda-inner">
+            <div>
+                <div class=" pin red-pin"></div>
+                <div class="red-pin-text"></div>
+            </div>
+            <div>
+                <div class=" pin yellow-pin"></div>
+                <div class="yellow-pin-text"></div>
+            </div>
+            <div>
+                <div class=" pin green-pin"></div>
+                <div class="green-pin-text"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./functions/Chart.bundle.min.js"></script>
+<script src="./functions/addNewCanvas.js"></script>
+<script src="./functions/startApp.js"></script>
+<script src="./functions/counterPer100000.js"></script>
+<script src="functions/createChart.js"></script>
+<script src="functions/showCurrentCountry.js"></script>
+<script src="functions/getCountriesApiData.js"></script>
+<script src="functions/createMap.js"></script>
+<script src="functions/createMarker.js"></script>
+<script src="functions/showMarkers.js"></script>
+<script src="functions/globalView.js"></script>
+<script src="functions/tableView.js"></script>
+<script src="functions/createDashboard.js"></script>
+<script src="functions/legendView.js"></script>
+<script src="functions/getDataApiForChart.js"></script>
+<script src="functions/unitsView.js"></script>
+<script src="functions/globalFunctions.js"></script>
+<script src="functions/showSectionInFullScreen.js"></script>
+<script src="functions/getDataApiForCurrentCountry.js"></script>
+<script src="functions/addListeners.js"></script>
+</body>
+</html>

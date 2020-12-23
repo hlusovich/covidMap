@@ -1,0 +1,334 @@
+html {
+    color: #535353;
+    background: #000;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.map {
+    grid-area: map;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "cap cap cap" "global-cases map map" "table map map" "table diagramma legenda" "table-buttons diagramma legenda";
+    grid-template-rows: 3% 16% 30% 28% 8%;
+    grid-template-columns: 20% 40% 28%;
+    margin: 0 auto;
+    grid-gap: 2%;
+}
+
+.container-table {
+    grid-template-areas: "table table table" "table table table" "table table table" "table table table" "table table table";
+    margin-left: 5%;
+
+}
+
+.container-chart {
+    grid-template-areas: "diagramma diagramma diagramma" "diagramma diagramma diagramma" "diagramma diagramma diagramma" "diagramma diagramma diagramma" "diagramma diagramma diagramma";
+    margin-left: 5%;
+}
+
+.container-map {
+    margin-left: 5%;
+    grid-template-areas: "map map map" "map map map" "map map map" "map map map" "map map map";
+}
+
+.table {
+    grid-area: table;
+    background: #222222;
+    display: flex;
+    flex-flow: column;
+    font-size: 25px;
+    position: relative;
+
+}
+
+.table-list {
+    overflow: auto;
+    padding: 0 10px;
+}
+
+.table-item {
+    display: flex;
+    border-bottom: 1px solid grey;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 20%;
+}
+
+.table-item span:nth-child(1) {
+    color: red;
+    margin: 10px;
+}
+
+.table-item span:nth-child(2) {
+    color: whitesmoke;
+}
+
+.table-item span:nth-child(2):hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.chart {
+    grid-area: diagramma;
+    background: #222222;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+
+}
+
+.dashboard-cap {
+    grid-area: cap;
+}
+
+.cap {
+    grid-area: cap;
+    font-size: 30px;
+}
+
+.global-cases {
+    grid-area: global-cases;
+    color: rgb(217 6 21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    font-size: 25px;
+    background: #222222;
+    text-align: center;
+}
+
+.global-cases span:nth-child(1) {
+    color: whitesmoke;
+}
+
+.global-cases span:nth-child(2) {
+    font-size: 40px;
+}
+
+.table-list::-webkit-scrollbar {
+    width: .4rem;
+    background-color: #6e7580;
+}
+
+.table-list::-webkit-scrollbar-thumb:hover {
+    background-color: #a4abb6;
+}
+
+.table-list::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 2.0rem;
+}
+
+.table-list::-webkit-scrollbar-track {
+    background-color: #222222;
+}
+
+.table-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.table-nav-item:hover {
+    color: yellow;
+    cursor: pointer;
+
+}
+
+.table-list {
+    display: flex;
+    flex-flow: column;
+}
+
+.table-nav-item_active {
+    color: yellow;
+}
+
+.legenda {
+    grid-area: legenda;
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.legenda-inner {
+    background: honeydew;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.legenda-inner > div {
+    display: flex;
+    align-items: baseline;
+    font-size: 30px;
+
+}
+
+body::-webkit-scrollbar {
+    width: .4rem;
+    background-color: #6e7580;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #a4abb6;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 2.0rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #222222;
+}
+
+.pin {
+    height: 20px;
+    width: 20px;
+    background: #a4abb6;
+    margin-top: 20px;
+    margin-right: 10%
+}
+
+.red-pin {
+    background: red;
+}
+
+.green-pin {
+    background: green;
+}
+
+.yellow-pin {
+    background: yellow;
+}
+
+.table-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.table-buttons button {
+    font-size: 15px;
+    outline: none;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 1px;
+    background: none;
+    color: white;
+}
+
+.table-buttons span {
+    color: white;
+}
+
+.table-buttons button:hover {
+    color: deepskyblue;
+}
+
+.table-buttons_active {
+    color: deepskyblue !important;
+}
+
+.flag {
+    width: 30px;
+}
+
+.table-search {
+    margin: 10px 10px;
+    padding-left: 8%;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.table-search input {
+    border: none;
+    outline: none;
+    background: #222222;
+    color: white;
+    padding-left: 10px;
+    font-size: 20px;
+    max-width: 80%;
+}
+
+.hide {
+    display: none;
+}
+
+.current-country-cases {
+    color: ghostwhite;
+    text-decoration: ghostwhite;
+}
+
+.current-country-deaths {
+    color: ghostwhite;
+    text-decoration: ghostwhite;
+}
+
+.current-country-recovered {
+    color: ghostwhite;
+    text-decoration: ghostwhite;
+}
+
+.current-country-cases:hover, .current-country-deaths:hover, .current-country-recovered:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+.current-country_active {
+    color: yellow;
+}
+
+.show-full-size-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background: #222222;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1000;
+}
+
+.show-full-size-btn:hover {
+    color: yellow;
+}
+.hide-background{
+    background: none;
+}
+
+@media (max-width: 1200px) {
+    .table-nav {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    html{
+        overflow: auto;
+    }
+
+}
